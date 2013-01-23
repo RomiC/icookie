@@ -25,11 +25,13 @@ iCookie = {
 				case "year":
 					expiresStr = (new Date((new Date).setYear((new Date).getFullYear() + 1))).toGMTString();
 					break;
+				case "session":
+					expiresStr = false;
 			}
 		} else	// set cookie for a day, by default
 			expiresStr = (new Date(Date.now() + 86400000)).toGMTString();
 
-		document.cookie = name + "=" + escape(value) + "; expires=" + expiresStr +"; path=/";
+		document.cookie = name +"="+ escape(value) +";"+ ((expiresStr !== false) ? " expires="+ expiresStr +";" : "") +" path=/";
 	},
 	/**
 	 * Get cookie

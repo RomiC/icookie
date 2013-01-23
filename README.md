@@ -4,7 +4,7 @@ Micro-class for working with cookies on javascript.
 
 ## Methods ##
 
-*	**set(name, value, period)** – set cookie with name "name" with value "value" for period "period". "name" and "value" are strings. "period" could be date object of end date or string – humanity name of a period: "day", "week", "month", "year" or "forever".
+*	**set(name, value, period)** – set cookie with name "name" with value "value" for period "period". "name" and "value" are strings. "period" could be date object of end date or string – humanity name of a period: "day", "week", "month", "year", "forever" or "session".
 *	**get(name)** – return value of cookie or boolean false, if cookie "name" is not set or expired.
 *	**isSet(name)** – check if cookie "name" exists.
 *	**unset(name)** - unset cookie "name" (set cookie expired date in the past)
